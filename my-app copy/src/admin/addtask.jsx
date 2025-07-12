@@ -34,7 +34,7 @@ useEffect(() => {
     console.log(Task);
 
     try {
-      const response = await axios.post("http://localhost:3001/task", Task);
+      const response = await axios.post("https://finaltask-backend.onrender.com/task", Task);
       alert(response.data.message);
       setTask({title: "",
     description: "",
