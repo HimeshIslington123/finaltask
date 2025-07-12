@@ -19,7 +19,7 @@ const Port = process.env.PORT || 3001;
 
 
 app.use(cors({
-  origin: "https://finaltask-fortentend.onrender.com"// 👈 frontend domain
+  origin: "https://finaltask-fortentend.onrender.com",
   credentials: true                 // 👈 allow cookies to be sent
 }));
 app.use(cookieParser()); 
