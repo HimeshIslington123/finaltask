@@ -10,7 +10,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3001/register", {
+      const response = await axios.post("https://finaltask-backend.onrender.com/register", {
         email,
         password,
         name,
