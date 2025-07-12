@@ -14,7 +14,7 @@ const [users, setUsers] = useState([]);
 useEffect(() => {
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/users");
+      const res = await axios.get("https://finaltask-backend.onrender.com/users");
       setUsers(res.data.users); // Save the list to state
     } catch (error) {
       console.error("Failed to fetch users", error);
