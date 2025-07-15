@@ -17,7 +17,7 @@ const Ask_holiday = () => {
 
   const fetchMyHolidays = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/user/myholidays", {
+      const res = await axios.get("https://finaltask-mzg5.onrender.com/user/myholidays", {
         withCredentials: true,
       });
       setMyHolidays(res.data.holidays);
@@ -34,7 +34,7 @@ const Ask_holiday = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3001/submitholiday", data, {
+      const response = await axios.post("https://finaltask-mzg5.onrender.com/submitholiday", data, {
         withCredentials: true,
       });
       console.log(response.data.message);
