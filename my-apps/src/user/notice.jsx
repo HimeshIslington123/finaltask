@@ -8,7 +8,7 @@ const Notice = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/getnotice");
+        const response = await axios.get("https://finaltask-mzg5.onrender.com/getnotice");
         setNotices(response.data.data); // response.data contains array of notices
       } catch (error) {
         alert("Error fetching notice data");
