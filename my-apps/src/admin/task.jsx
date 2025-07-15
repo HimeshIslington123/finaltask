@@ -6,7 +6,7 @@ const Task = () => {
 
   const getAllTasks = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/taskall",{ withCredentials: true });
+      const response = await axios.get("https://finaltask-mzg5.onrender.com/taskall",{ withCredentials: true });
     
 
       setTaskList(response.data.data); // update state with fetched data
