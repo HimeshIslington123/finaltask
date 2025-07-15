@@ -23,12 +23,12 @@ const login = async (req, res) => {
     );
     console.log("Generated JWT:", jwt_token);
 
-    res.cookie("token", jwt_token, {
-      httpOnly: true,
-      secure: true, // true in production with HTTPS
-      sameSite: "Lax",
-      maxAge: 3600000,
-    });
+   res.cookie('token', jwt_token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: 'None',  // <-- change this
+  maxAge: 3600000,
+});
 
     return res.status(200).json({
       message: "Welcome to login",
