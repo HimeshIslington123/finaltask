@@ -9,7 +9,7 @@ const Display = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/isLoggedIn", {
+        const response = await axios.get("https://finaltask-mzg5.onrender.com/isLoggedIn", {
           withCredentials: true, // ⚠️ Important for cookie-based auth
         });
         setData(response.data.user);
