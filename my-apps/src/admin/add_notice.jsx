@@ -22,7 +22,7 @@ const AddNotice = () => {
 
   try {
     const response = await axios.post(
-      "http://localhost:3001/addNotice",
+      "https://finaltask-mzg5.onrender.com/addNotice",
       { datas }, // sending datas object
       { withCredentials: true }
     );
