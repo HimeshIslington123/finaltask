@@ -14,7 +14,7 @@ const [users, setUsers] = useState([]);
 useEffect(() => {
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/users");
+      const res = await axios.get("https://finaltask-mzg5.onrender.com/users");
       setUsers(res.data.users); // Save the list to state
     } catch (error) {
       console.error("Failed to fetch users", error);
@@ -34,7 +34,7 @@ useEffect(() => {
     console.log(Task);
 
     try {
-      const response = await axios.post("http://localhost:3001/task", Task);
+      const response = await axios.post("https://finaltask-mzg5.onrender.com/task", Task);
       alert(response.data.message);
       setTask({title: "",
     description: "",
