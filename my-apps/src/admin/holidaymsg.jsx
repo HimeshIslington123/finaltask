@@ -10,7 +10,7 @@ const AdminHolidayRequests = () => {
 
   const fetchHolidays = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/admin/allholidays", {
+      const res = await axios.get("https://finaltask-mzg5.onrender.com/admin/allholidays", {
         withCredentials: true,
       });
       setHolidays(res.data.holidays);
@@ -22,7 +22,7 @@ const AdminHolidayRequests = () => {
 
   const handleApproval = async (id, status) => {
     try {
-      await axios.patch(`http://localhost:3001/admin/updateHoliday/${id}`, {
+      await axios.patch(`https://finaltask-mzg5.onrender.com/admin/updateHoliday/${id}`, {
         status
       }, { withCredentials: true });
 
