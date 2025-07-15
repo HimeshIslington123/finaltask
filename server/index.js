@@ -23,9 +23,10 @@ const PORT = 3001;
 
 
 app.use(cors({
-  origin: "http://localhost:3002", // explicitly allow frontend
-  credentials: true                // allow cookies and auth headers
+  origin: "https://finaltask-1u.onrender.com",  // your frontend deployed URL here
+  credentials: true
 }));
+
 
 app.use(cookieParser()); 
 
