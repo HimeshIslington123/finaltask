@@ -7,7 +7,7 @@ const Manage_user = () => {
   // Declare fetchUsers here so it's accessible everywhere
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/users");
+      const res = await axios.get("https://finaltask-mzg5.onrender.com/users");
       setUsers(res.data.users); // Users = [{ name, email }]
     } catch (error) {
       console.error("Failed to fetch users", error);
@@ -20,7 +20,7 @@ const Manage_user = () => {
 
   const deleteuser = async (name) => {
     try {
-      await axios.delete(`http://localhost:3001/deltename/${name}`, { withCredentials: true });
+      await axios.delete(`https://finaltask-mzg5.onrender.com/deltename/${name}`, { withCredentials: true });
       alert("User has been deleted successfully");
       fetchUsers();  // Refresh user list after delete
     } catch (error) {
