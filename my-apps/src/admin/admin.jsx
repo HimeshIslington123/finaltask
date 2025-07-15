@@ -10,7 +10,7 @@ const Admin = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:3001/logout",
+        "https://finaltask-mzg5.onrender.com/logout",
         {},
         {
           withCredentials: true,
