@@ -6,7 +6,7 @@ const Home = () => {
 
   const getAllTasks = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/getAllTask",{ withCredentials: true });
+      const response = await axios.get("https://finaltask-mzg5.onrender.com/getAllTask",{ withCredentials: true });
       setTaskList(response.data.data);
     } catch (error) {
       console.log(error);
@@ -16,7 +16,7 @@ const Home = () => {
 
   const submitid = async (id) => {
     try {
-      await axios.put(`http://localhost:3001/updateStatus/${id}`,{ status: "complete" }, { withCredentials: true });
+      await axios.put(`https://finaltask-mzg5.onrender.com/updateStatus/${id}`,{ status: "complete" }, { withCredentials: true });
 
       getAllTasks();
     } catch (error) {
