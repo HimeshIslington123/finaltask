@@ -23,11 +23,12 @@ const login = async (req, res) => {
     );
     console.log("Generated JWT:", jwt_token);
 
-   res.cookie('token', jwt_token, {
+  res.cookie('token', jwt_token, {
   httpOnly: true,
   secure: true,
-  sameSite: 'None',  // <-- change this
+  sameSite: 'None',
   maxAge: 3600000,
+  domain: ".onrender.com" // 👈 add this!
 });
 
     return res.status(200).json({
