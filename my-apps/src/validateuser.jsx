@@ -9,7 +9,7 @@ const AuthWrapper = ({ children }) => {
   useEffect(() => {
     const checkLogin = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/isLoggedIn", {
+        const res = await axios.get("https://finaltask-mzg5.onrender.com/isLoggedIn", {
           withCredentials: true,
         });
         console.log("✅ Logged in:", res.data.user);
