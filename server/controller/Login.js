@@ -25,7 +25,7 @@ const login = async (req, res) => {
 
     res.cookie("token", jwt_token, {
       httpOnly: true,
-      secure: false, // true in production with HTTPS
+      secure: true, // true in production with HTTPS
       sameSite: "Lax",
       maxAge: 3600000,
     });
