@@ -24,12 +24,13 @@ const login = async (req, res) => {
     console.log("Generated JWT:", jwt_token);
 
 
-    res.cookie("token", jwt_token, {
+   res.cookie("token", jwt_token, {
   httpOnly: true,
-  secure: false,
-  sameSite: "Lax",   // works for most dev setups
+  secure: true, // ✅ Must be true for cross-site + HTTPS
+  sameSite: "None", // ✅ Must be None for cross-site
   maxAge: 3600000,
 });
+
 
 
     return res.status(200).json({
